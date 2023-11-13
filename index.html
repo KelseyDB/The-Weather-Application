@@ -6,33 +6,37 @@
   <title>The Weather</title>
   <link rel="stylesheet" href="./styles/style.css">
   <script defer src="./scripts/script.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <header>
     <div class="nav-bar">
-      <ul>
+      <ul class="nav-list">
         <li>Home</li>
-        <li></li>
         <li>About</li>
       </ul>
+
     </div>
   </header>
   <main>
-    <div>
+    <div class="weathercard">
       <h1>
-        Forecast
+        THE WEATHER
       </h1>
-      <div class="background">
-        
+      <p>Find out what the weather is like in your city:</p>
+      <div class="input-field">
+        <label class="inputField"><input type="text" name="text" placeholder="Gent..." id="citiesInput"></label>
+        <button type="submit">Submit</button>
       </div>
     </div>
-    <input type="text" name="text" id="citiesInput">
-    <button type="submit">Submit</button>
   </main>
-  <footer>
+  <!-- <footer>
     <div class="infoFooter">
       <p>Copyright blabla</p>
     </div>
-  </footer>
+  </footer> -->
 </body>
 </html>
