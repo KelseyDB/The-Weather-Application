@@ -6,37 +6,22 @@
   <title>The Weather</title>
   <link rel="stylesheet" href="./styles/style.css">
   <script defer src="./scripts/script.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
-  <header>
-    <div class="nav-bar">
-      <ul class="nav-list">
-        <li>Home</li>
-        <li>About</li>
-      </ul>
-
-    </div>
-  </header>
   <main>
     <div class="weathercard">
       <h1>
         THE WEATHER
       </h1>
       <p>Find out what the weather is like in your city:</p>
-      <div class="input-field">
-        <label class="inputField"><input type="text" name="text" placeholder="Gent..." id="citiesInput"></label>
-        <button type="submit">Submit</button>
+      <form class="input-field">
+        <label for="cityName"class="inputLabel" style="display: none;">Location:</label>
+        <input type="text" name="text" placeholder="City" id="cityName">
+        <button class="cityButton" type="button">Search</button>
+      </form>
+      <div class="card-container">
       </div>
     </div>
   </main>
-  <!-- <footer>
-    <div class="infoFooter">
-      <p>Copyright blabla</p>
-    </div>
-  </footer> -->
 </body>
 </html>
