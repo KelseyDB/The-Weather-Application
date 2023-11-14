@@ -1,10 +1,3 @@
-//TODO: on clicking submit or pressing ENTER: 
-//      -use API to define city, geo location data from use input
-//      -use API to get weather data for next 5 days, based on geo location data
-//      -manipulate DOM to display weather data
-//TODO: make APIs asynchronous
-//TODO: RESPONSIVE, ACCESSIBLE, MOBILE FRIENDLY
-
 
 const cityInput = document.querySelector("#cityName");
 const button = document.querySelector(".cityButton");
@@ -57,7 +50,7 @@ async function startWeather(){
 
     const image = document.createElement('img');
     const weatherCode = weatherData.daily.weather_code[i]
-      if (weatherCode == 0) {
+      {if (weatherCode == 0) {
         image.src = "./images/WeatherCode/day-code-0.png"
       }
       if (weatherCode == 1 || weatherCode == 2){
@@ -66,8 +59,21 @@ async function startWeather(){
       if (weatherCode == 3) {
         image.src = "./images/WeatherCode/code-3.png"
       }
-      if (51 < weatherCode && weatherCode < 67) {
+      if (51 <= weatherCode && weatherCode <= 67) {
         image.src = "./images/WeatherCode/day-code-51-67.png"        
+      }
+      if (71 <= weatherCode && weatherCode <= 77) {
+        image.src = "./images/WeatherCode/code-71-77.png"        
+      }
+      if (80 <= weatherCode && weatherCode <= 82) {
+        image.src = "./images/WeatherCode/code-80-82.png"        
+      }
+      if (85 <= weatherCode && weatherCode <= 86) {
+        image.src = "./images/WeatherCode/code-85-86.png"        
+      }
+      if (95<= weatherCode && weatherCode <= 99) {
+        image.src = "./images/WeatherCode/code-95-99.png"        
+      }
       }
     console.log(weatherCode);
     card.append(image)

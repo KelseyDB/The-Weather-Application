@@ -132,3 +132,12 @@ body main .weathercard .input-field button:hover::before {
   top: -30px;
   left: -30px;
 }
+body main .weathercard .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
