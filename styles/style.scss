@@ -173,6 +173,9 @@ body {
             height: 100px;
           }
           .temperature{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
             p {
               font-size: 20px;
             }

@@ -195,6 +195,17 @@ body main .weathercard .card-container .card {
 body main .weathercard .card-container .card .weather-image {
   height: 100px;
 }
+body main .weathercard .card-container .card .temperature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
 body main .weathercard .card-container .card .temperature p {
   font-size: 20px;
 }

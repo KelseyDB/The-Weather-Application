@@ -62,6 +62,9 @@ async function startWeather(){
         if (weatherCode == 3) {
           image.src = "./images/WeatherCode/code-3.png"
         }
+        if (45 <= weatherCode && weatherCode <= 48) {
+          image.src = "./images/WeatherCode/code-45-48.png"  
+        }
         if (51 <= weatherCode && weatherCode <= 67 && isDay == 1) {
           image.src = "./images/WeatherCode/day-code-51-67.png"        
         }if (51 <= weatherCode && weatherCode <= 67 && isDay == 0) {
@@ -80,7 +83,6 @@ async function startWeather(){
           image.src = "./images/WeatherCode/code-95-99.png"        
         }
       }
-
     card.className = "card"
     image.className = "weather-image"
     temperature.className = "temperature"
