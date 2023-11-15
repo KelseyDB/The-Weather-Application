@@ -3,13 +3,22 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("../images/paper_clouds.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: darkgray;
+  // background-image: url("../images/paper_clouds.jpg");
+  // background-position: center;
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
   main{
     margin: auto;
+    background-image: url("../images/paper_clouds.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 300px;
+    max-width: auto;
+    height: auto; 
+
     .weathercard{
       h1{
         color: rgb(51, 188, 212);
@@ -39,23 +48,22 @@ body {
         0.035em 0.035em 0 mix(#fff, rgb(31, 31, 146), 72%);
 
       }
-      display: block;
       margin: 20px auto;
       min-width: 300px;
-      max-width: 600px;
       background-color: rgba(255, 255, 255, 0.384);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;      
       height: auto; 
-      border-radius: 10px; 
-      backdrop-filter: blur(12px);  
+      backdrop-filter: blur(4px);  
       padding: 20px; 
       text-align: center;
 
       .input-field{
+        text-align: center;
         align-items: center;
         display: flex;
         justify-content: center;
         flex-direction: row;
+        width: 500px;
         
 
         ::placeholder{
@@ -131,6 +139,17 @@ body {
       .card-container{
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        .card{
+          .weather-image{
+            height: 100px;
+          }
+          .temperature{
+            p {
+              font-size: 20px;
+            }
+          }
+        }
       }
     }
   }
