@@ -3,23 +3,22 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: darkgray;
-  // background-image: url("../images/paper_clouds.jpg");
-  // background-position: center;
-  // background-size: cover;
-  // background-repeat: no-repeat;
+  background-image: url("../images/paper_clouds.jpg");
+  background-position: center;
+  background-size: fill;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
 
   main{
     margin: auto;
-    background-image: url("../images/paper_clouds.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
     min-width: 300px;
     max-width: auto;
     height: auto; 
+    max-width: 1200px;
 
     .weathercard{
+      box-sizing: border-box;
       h1{
         color: rgb(51, 188, 212);
         font-size: 3rem;  
@@ -53,94 +52,123 @@ body {
       background-color: rgba(255, 255, 255, 0.384);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;      
       height: auto; 
-      backdrop-filter: blur(4px);  
-      padding: 20px; 
+      backdrop-filter: blur(5px);   
       text-align: center;
 
-      .input-field{
-        text-align: center;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        flex-direction: row;
-        width: 500px;
+      header{
+        max-width: 600px;
+        margin: auto;
+        margin-bottom: 50px;
+        .input-field{
+          text-align: center;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          flex-direction: row;
+          width: auto;
+          
+          ::placeholder{
+            color: lightgray;
+            padding-left: 5px;
+          }
+          .inputLabel{
+            margin-right: 150px;
+            font-family: "Quicksand";
+            
+          }
+          
+          input{
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.705);
+            font-family: "Quicksand";
+            height: 2.5rem;
+            font-size: 1.5rem;
+            border: none;
+            border-radius: 8px;
+            border-bottom: 1px solid gray;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;      
+  
+          }
+          input[type=text]:focus {
+            outline:none
+          }
         
-
-        ::placeholder{
-          color: lightgray;
-          padding-left: 5px;
-        }
-        .inputLabel{
-          margin-right: 150px;
-          font-family: "Quicksand";
-          display: block;
-        }
-        
-        input{
-          background-color: rgba(255, 255, 255, 0.705);
-          font-family: "Quicksand";
-          font-size: 2rem;
-          height: 2.5rem;
-          width: 80%;
-          border: none;
-          border-radius: 8px;
-          border-bottom: 1px solid gray;
-          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;      
-
-        }
-        input[type=text]:focus {
-          outline:none
-      }
-      
-        button {
-          cursor: pointer;
-          background-color: #fff;
-          --color: rgb(51, 188, 212);
-          font-family: inherit;
-          display: inline-block;
-          width: 6em;
-          height: 2.5em;
-          line-height: 2.5em;
-          overflow: hidden;
-          margin: 10px;
-          font-size: 17px;
-          z-index: 1;
-          color: var(--color);
-          border: 2px solid var(--color);
-          border-radius: 8px;
-          position: relative;
-        }
-        
-        button::before {
-          position: absolute;
-          content: "";
-          background: var(--color);
-          width: 150px;
-          height: 200px;
-          z-index: -1;
-          border-radius: 50%;
-        }
-        
-        button:hover {
-          color: white;
-        }
-        
-        button:before {
-          top: 100%;
-          left: 100%;
-          transition: .3s all;
-        }
-        
-        button:hover::before {
-          top: -30px;
-          left: -30px;
+          button {
+            cursor: pointer;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;      
+            border-bottom: 1px solid gray;
+            background-color: #ffffff77;
+            --color: rgb(51, 188, 212);
+            font-family: "quicksand";
+            width: 6em;
+            height: 2.5em;
+            line-height: 2.5em;
+            overflow: hidden;
+            margin: 10px;
+            font-size: 17px;
+            z-index: 1;
+            color: var(--color);
+            border: 2px solid var(--color);
+            border-radius: 8px;
+            position: relative;
+          }
+          
+          button::before {
+            position: absolute;
+            content: "";
+            background: var(--color);
+            width: 150px;
+            height: 200px;
+            z-index: -1;
+            border-radius: 50%;
+          }
+          
+          button:hover {
+            color: white;
+          }
+          
+          button:before {
+            top: 100%;
+            left: 100%;
+            transition: .3s all;
+          }
+          
+          button:hover::before {
+            top: -30px;
+            left: -30px;
+          }
         }
       }
       .card-container{
+        box-sizing: border-box;
+        gap: 10px;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+        .card:nth-of-type(1){
+          box-sizing: border-box;
+          flex: 100%;
+          .weather-image{
+            height: 200px;
+          }
+          
+          .temperature{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 10px auto;
+            width: 350px;
+
+          }
+          
+        }
         .card{
+          backdrop-filter: blur(14px); 
+          width: 180px;
+          box-shadow: 0px 9px 15px 0px rgba(0,0,0,0.1);
+
           .weather-image{
             height: 100px;
           }
@@ -153,26 +181,101 @@ body {
       }
     }
   }
-
-  // footer{
-  //   position: absolute;
-  //   bottom: 0;
-  //   width: 100vw;
-  //   height: 2.5rem;
-  // }
 }
 
-// @media only screen and (max-width: 600px) {
-//   body{
-//     main{
-//       .weathercard{
-//         h1{
-//           font-size: 3rem;
-//         }
-//         p{
-//           font-size: 1rem;
-//         }
-//       }  
-//     }
-//   }
-// }
+@media only screen and (max-width: 600px) {
+  body{
+    margin: 0;
+    padding: 0;
+    main{
+      .weathercard{
+        margin-top: 0;
+        header{
+          h1{
+            font-size: 1.5rem;
+            margin-top: 0;
+            padding-top: 15px;
+          }
+          p{
+            font-size: 0.9rem;
+          }
+          .input-field{
+            scale: (0.88);
+            input{
+              height: 2.5rem;
+              font-size: 1.5rem;
+            }
+          }
+        }
+        .card-container{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          
+          .card:nth-of-type(1){
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+            width: 270px;
+            border-bottom: none;
+            box-shadow: 0px 9px 15px 0px rgba(0,0,0,0.1);
+            backdrop-filter: blur(5px);  
+            .day{
+              font-size: 1.5rem;
+              margin: 5px;
+            }
+            .weather-image{
+              display: block;
+              height: 125px;
+              width: 125px;
+              margin: auto;
+            }
+            .temperature{
+              margin: 0px;
+              width: auto;
+              p {
+                font-size: 20px;
+                margin: 5px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+
+              }
+            }
+          }
+
+          .card{
+            background-color: #ffffff4b;  
+            backdrop-filter: none;  
+            border-radius: 0px;
+            box-shadow: none;
+            border-bottom: 1px solid gray;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .day{
+              font-size: 1rem;
+            }
+            .weather-image{
+              display: none;
+              height: 100px;
+            }
+            .temperature{
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              margin-right: 12px;
+              gap: 10px;
+
+              p {
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }  
+    }
+  }
+}

@@ -84,8 +84,8 @@ async function startWeather(){
     card.className = "card"
     image.className = "weather-image"
     temperature.className = "temperature"
-    tempMax.textContent = (weatherData.daily.temperature_2m_max[i]+"°C");
-    tempMin.textContent = (weatherData.daily.temperature_2m_min[i]+"°C");
+    tempMax.innerHTML = ("Max: <br>" + weatherData.daily.temperature_2m_max[i]+"°C");
+    tempMin.innerHTML = ("Min: <br>" +weatherData.daily.temperature_2m_min[i]+"°C");
     container.appendChild(card)
     card.append(weekday)
     card.append(image)
