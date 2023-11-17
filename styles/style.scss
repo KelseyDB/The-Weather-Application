@@ -11,40 +11,20 @@ body {
 
   main{
     margin: auto;
-
     min-width: 300px;
     max-width: auto;
     height: auto; 
     max-width: 1200px;
-
     .weathercard{
       box-sizing: border-box;
       h1{
-        color: rgb(51, 188, 212);
+        color:#353f5a;
         font-size: 3rem;  
         font-weight: 900;
-        text-shadow: 
-          -0.0075em 0.0075em 0 mix(#fff, rgb(31, 31, 146), 94%),
-          0.005em 0.005em 0 mix(#fff, rgb(31, 31, 146), 60%),
-          0.01em 0.01em 0 mix(#fff, rgb(31, 31, 146), 62%), 
-          0.015em 0.015em mix(#fff, rgb(31, 31, 146), 64%), 
-          0.02em 0.02em 0 mix(#fff, rgb(31, 31, 146), 66%), 
-          0.025em 0.025em 0 mix(#fff, rgb(31, 31, 146), 68%),
-          0.03em 0.03em 0 mix(#fff, rgb(31, 31, 146), 70%),
-          0.035em 0.035em 0 mix(#fff, rgb(31, 31, 146), 72%);
       }
       p{
-        color: rgb(51, 188, 212);
+        color: #353f5a;
         font-size: 1.5rem;
-        text-shadow: 
-        -0.0075em 0.0075em 0 mix(#fff, rgb(31, 31, 146), 94%),
-        0.005em 0.005em 0 mix(#fff, rgb(31, 31, 146), 60%),
-        0.01em 0.01em 0 mix(#fff, rgb(31, 31, 146), 62%), 
-        0.015em 0.015em mix(#fff, rgb(31, 31, 146), 64%), 
-        0.02em 0.02em 0 mix(#fff, rgb(31, 31, 146), 66%), 
-        0.025em 0.025em 0 mix(#fff, rgb(31, 31, 146), 68%),
-        0.03em 0.03em 0 mix(#fff, rgb(31, 31, 146), 70%),
-        0.035em 0.035em 0 mix(#fff, rgb(31, 31, 146), 72%);
 
       }
       margin: 20px auto;
@@ -52,14 +32,14 @@ body {
       background-color: rgba(255, 255, 255, 0.384);
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;      
       height: auto; 
-      backdrop-filter: blur(5px);   
+      backdrop-filter: blur(7px);   
       text-align: center;
-
       header{
         max-width: 600px;
         margin: auto;
         margin-bottom: 50px;
         .input-field{
+          margin: auto;
           text-align: center;
           align-items: center;
           display: flex;
@@ -98,7 +78,8 @@ body {
             box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;      
             border-bottom: 1px solid gray;
             background-color: #ffffff77;
-            --color: rgb(51, 188, 212);
+            --color: 
+            #353f5a;
             font-family: "quicksand";
             width: 6em;
             height: 2.5em;
@@ -147,22 +128,53 @@ body {
         flex-wrap: wrap;
         justify-content: center;
         padding: 20px;
+        // align-items: baseline;
         .card:nth-of-type(1){
           box-sizing: border-box;
-          flex: 100%;
+          width: 45%;
+          height: 455px;
           .weather-image{
             height: 200px;
+            filter:brightness(0) saturate(100%) invert(20%) sepia(14%) saturate(1647%) hue-rotate(186deg) brightness(94%) contrast(84%);
+
           }
-          
           .temperature{
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             margin: 10px auto;
-            width: 350px;
-
+            width: 150px;
           }
-          
+        }
+        .hour-card{
+          width: 52%;
+          backdrop-filter: blur(14px); 
+          box-shadow: 0px 9px 15px 0px rgba(0,0,0,0.1);
+          .hour-header{
+            p{
+              font-size: 1rem;
+            }
+            display: flex;
+            justify-content: space-around;
+          }
+          .hour{
+            background-color: #ffffff4b;   
+            border-radius: 0px;
+            border-bottom: 1px solid gray;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            p{ 
+              margin: 12px;
+            }
+            .hour-image{
+              filter:brightness(0) saturate(100%) invert(20%) sepia(14%) saturate(1647%) hue-rotate(186deg) brightness(94%) contrast(84%);
+              height: 50px;
+              margin: auto 0;
+            }
+          }
         }
         .card{
           backdrop-filter: blur(14px); 
@@ -171,6 +183,8 @@ body {
 
           .weather-image{
             height: 100px;
+            filter:brightness(0) saturate(100%) invert(20%) sepia(14%) saturate(1647%) hue-rotate(186deg) brightness(94%) contrast(84%);
+
           }
           .temperature{
             display: flex;
@@ -192,17 +206,18 @@ body {
     padding: 0;
     main{
       .weathercard{
-        margin-top: 0;
+        margin: 0 auto;
         header{
           h1{
-            font-size: 1.5rem;
+            font-size: 3rem;
             margin-top: 0;
             padding-top: 15px;
           }
           p{
-            font-size: 0.9rem;
+            font-size: 1rem;
           }
           .input-field{
+            margin: auto;
             scale: (0.88);
             input{
               height: 2.5rem;
@@ -215,17 +230,18 @@ body {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          margin: auto;
           
           .card:nth-of-type(1){
             display: flex;
             flex-direction: column;
-            margin-bottom: 20px;
-            width: 270px;
+            margin: auto;
+            width: 320px;
             border-bottom: none;
-            box-shadow: 0px 9px 15px 0px rgba(0,0,0,0.1);
-            backdrop-filter: blur(5px);  
-            .day{
-              font-size: 1.5rem;
+            // box-shadow: 0px 9px 15px 0px rgba(0,0,0,0.1);
+            // backdrop-filter: blur(5px);  
+            .weekday{
+              font-size: 2rem;
               margin: 5px;
             }
             .weather-image{
@@ -233,21 +249,51 @@ body {
               height: 125px;
               width: 125px;
               margin: auto;
+              filter:brightness(0) saturate(100%) invert(20%) sepia(14%) saturate(1647%) hue-rotate(186deg) brightness(94%) contrast(84%);
+
             }
             .temperature{
-              margin: 0px;
-              width: auto;
+              margin: auto;
+              width: 150px;
               p {
-                font-size: 20px;
+                font-size: 24px;
                 margin: 5px;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-
               }
             }
           }
-
+          .hour-card{
+            margin-bottom: 20px;
+            width: 320px;
+            backdrop-filter: blur(14px); 
+            box-shadow: 0px 9px 15px 0px rgba(0,0,0,0.1);
+            .hour-header{
+              p{
+                font-size: 1rem;
+              }
+              display: flex;
+              justify-content: space-around;
+            }
+            .hour{
+              background-color: #ffffff4b;   
+              border-radius: 0px;
+              border-bottom: 1px solid gray;
+              margin: auto;
+              display: flex;
+              flex-direction: row;
+              flex-wrap: nowrap;
+              justify-content: space-around;
+              p{ 
+                margin: 12px;
+              }
+              .hour-image{
+                height: 50px;
+                margin: auto 0;
+              }
+            }
+          }
           .card{
             background-color: #ffffff4b;  
             backdrop-filter: none;  
@@ -258,12 +304,14 @@ body {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            .day{
+            .weekday{
               font-size: 1rem;
             }
             .weather-image{
               display: none;
               height: 100px;
+              filter:brightness(0) saturate(100%) invert(20%) sepia(14%) saturate(1647%) hue-rotate(186deg) brightness(94%) contrast(84%);
+
             }
             .temperature{
               display: flex;
